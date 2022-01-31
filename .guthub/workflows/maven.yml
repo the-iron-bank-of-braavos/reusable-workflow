@@ -7,9 +7,10 @@ on:
 
 jobs:
   reusable_workflow_job:
+    runs-on: ubuntu-latest
     steps:
       - run: |
           echo "Maven Message: $MESSAGE"
-        shell: bashs
+        shell: bash
         env:
           MESSAGE: ${{ inputs.message }}
