@@ -1,0 +1,16 @@
+on:
+  workflow_call:
+    inputs:
+      message:
+        required: true
+        type: string
+
+jobs:
+  reusable_workflow_job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Maven Message: $MESSAGE"
+        shell: bashs
+        env:
+          MESSAGE: ${{ inputs.message }}
