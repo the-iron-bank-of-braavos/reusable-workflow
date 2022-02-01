@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          date=date()
-          echo "Maven Message: $MESSAGE $date" > ${GITHUB_WORKSPACE}/file.txt
+          myte=date
+          echo "Maven Message: $MESSAGE $mydate" > ${GITHUB_WORKSPACE}/file.txt
         shell: bash
         env:
           MESSAGE: ${{ inputs.message }}
