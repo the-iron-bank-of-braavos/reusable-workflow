@@ -9,6 +9,10 @@ jobs:
   reusable_workflow_job:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/download-artifact@master
+        with:
+          name: my-data
+          path: file.txt
       - run: |
           cat file.txt
         shell: bash
