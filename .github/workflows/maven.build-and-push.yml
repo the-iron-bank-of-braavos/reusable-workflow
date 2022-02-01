@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Maven Message: $MESSAGE"
+          echo "Maven Message: $MESSAGE ${date}" > file.txt
         shell: bash
         env:
           MESSAGE: ${{ inputs.message }}
