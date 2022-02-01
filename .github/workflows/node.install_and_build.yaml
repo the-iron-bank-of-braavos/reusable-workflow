@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Node Message: $MESSAGE"
+          cat file.txt
         shell: bash
         env:
           MESSAGE: ${{ inputs.message }}
