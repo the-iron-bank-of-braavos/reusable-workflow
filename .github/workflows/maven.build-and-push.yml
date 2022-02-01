@@ -11,11 +11,11 @@ jobs:
     steps:
       - run: |
           myte=date
-          echo "Maven Message: $MESSAGE $mydate" > ${GITHUB_WORKSPACE}/file.txt
+          echo "Maven Message: $MESSAGE $mydate" > file.txt
         shell: bash
         env:
           MESSAGE: ${{ inputs.message }}
       - uses: actions/upload-artifact@master
         with:
           name: my-data
-          path: ${GITHUB_WORKSPACE}/file.txt
+          path: file.txt
