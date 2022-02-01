@@ -14,7 +14,8 @@ jobs:
           name: my-data
           path: file.txt
       - run: |
-          cat ${GITHUB_WORKSPACE}/file.txt
+          ls -l
+          cat file.txt
         shell: bash
         env:
           MESSAGE: ${{ inputs.message }}
