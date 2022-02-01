@@ -12,9 +12,9 @@ jobs:
       - uses: actions/download-artifact@master
         with:
           name: my-data
-          path: file.txt
+          path: ${GITHUB_WORKSPACE}/file.txt
       - run: |
-          cat file.txt
+          cat ${GITHUB_WORKSPACE}/file.txt
         shell: bash
         env:
           MESSAGE: ${{ inputs.message }}
