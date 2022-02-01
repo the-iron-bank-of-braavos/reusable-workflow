@@ -14,3 +14,7 @@ jobs:
         shell: bash
         env:
           MESSAGE: ${{ inputs.message }}
+      - uses: actions/upload-artifact@master
+        with:
+          name: my-data
+          path: file.txt
